@@ -2,6 +2,7 @@ package com.astrapay.controller;
 
 import com.astrapay.dto.NoteDto;
 import com.astrapay.dto.CreateNoteRequestDto;
+import com.astrapay.dto.response.ApiResponse;
 import com.astrapay.service.NotesService;
 import io.swagger.annotations.Api;
 import lombok.extern.slf4j.Slf4j;
@@ -12,6 +13,8 @@ import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
+import java.net.URI;
+import java.util.List;
 
 @RestController
 @Api(value = "Notes Controller")
@@ -27,14 +30,21 @@ public class NotesController {
     }
 
     @PostMapping
-    public ResponseEntity<NoteDto> create(@Valid @RequestBody CreateNoteRequestDto req) {
+    public ResponseEntity<ApiResponse<NoteDto>> create(@Valid @RequestBody CreateNoteRequestDto req) {
         NoteDto note = notesService.createNote(req);
-        return ResponseEntity.status(HttpStatus.CREATED).body(note);
+        return ResponseEntity.status(HttpStatus.CREATED)
+                .body(ApiResponse.success(note, "Note created successfully"));
     }
 
+
     @GetMapping
-    public ResponseEntity<Iterable<NoteDto>> getAll() {
-        return ResponseEntity.ok(notesService.getAllNotes());
+    public ResponseEntity<ApiResponse<List<NoteDto>>> getAll() {
+        return ResponseEntity.ok(
+                ApiResponse.success(
+                        notesService.getAllNotes(),
+                        "Notes retrieved successfully"
+                )
+        );
     }
 
 }
