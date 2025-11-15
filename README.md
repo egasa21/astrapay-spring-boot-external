@@ -215,5 +215,38 @@ The full API documentation with sample requests and responses is available on **
 - Includes request bodies and example responses
 
 
-> Tip: You can also use the **Postman "Run in Postman" button** to import the collection directly into your workspace.
+> You can also use the **Postman "Run in Postman" button** to import the collection directly into your workspace.
 
+## Screenshots
+
+## a. Successful Validation (Backend Tests)
+![img_5.png](screenshoots/img_5.png)
+
+
+## b. Postman API Implementation Details
+
+1. GET All Notes (GET /api/v1/notes)
+![img_2.png](screenshoots/img_2.png)
+
+2. GET Note by ID (GET /api/v1/notes/{id})
+![img_6.png](screenshoots/img_6.png)
+
+3. Create Note (POST /api/v1/notes)
+![img_4.png](screenshoots/img_4.png)
+
+4. Update Note (PUT /api/v1/notes/{id})
+![img_3.png](screenshoots/img_3.png)
+
+5. Delete Note (DELETE /api/v1/notes/{id})
+![img_1.png](screenshoots/img_1.png)
+
+## c. Application - Empty List Page
+![app-empty-list.png](screenshoots/app-empty-list.png)
+### d. Application - Page with 6 Notes
+![img.png](screenshoots/img.png)
+
+### e. Application - Edit Page
+![img_7.png](screenshoots/img_7.png)
+
+### f. Application - Delete Confirmation Page
+![img_8.png](screenshoots/img_8.png)
