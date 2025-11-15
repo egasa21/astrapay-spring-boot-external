@@ -179,15 +179,13 @@ cd astrapay-spring-boot-external
 
 1. Open IntelliJ IDEA.
 
-2. Select **File > Open...** and choose the project's root `pom.xml` file.
+2. Select **File > Open...** and choose the project.
 
-3. IntelliJ will automatically detect it as a Maven project and download all dependencies (this replaces `mvn clean install`).
+3. Wait for the indexing to complete.
 
-4. Wait for the indexing to complete.
+4. Find the main application class (the one annotated with `@SpringBootApplication`).
 
-5. Find the main application class (the one annotated with `@SpringBootApplication`).
-
-6. Click the green "play" icon next to the class or the `main` method and select **"Run 'YourApplicationName.main()'"**.
+5. Click the green "play" icon next to the class or the `main` method and select **"Run 'NotesApplication.main()'"**.
 
 
 The server will start, and the API will be available at `http://localhost:8000`.
