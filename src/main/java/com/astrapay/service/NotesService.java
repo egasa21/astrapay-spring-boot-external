@@ -40,6 +40,14 @@ public class NotesService {
         notesRepository.deleteById(note.getId());
     }
 
+    public NoteDto updateNoteById(String id, CreateNoteRequestDto req) {
+        NoteModel note = notesRepository.findById(id)
+                .orElseThrow(() -> new NotFoundException("Note with id: " + id + " not found"));
+        note.setContent(req.getContent());
+        NoteModel saved = notesRepository.save(note);
+        return mapToDto(saved);
+    }
+
     private NoteDto mapToDto(NoteModel model) {
         NoteDto dto = new NoteDto();
         dto.setId(model.getId());

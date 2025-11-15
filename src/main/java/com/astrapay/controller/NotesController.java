@@ -63,4 +63,10 @@ public class NotesController {
         return ResponseEntity.ok(ApiResponse.success("Note deleted successfully", null));
     }
 
+    @PutMapping("/{id}")
+    public ResponseEntity<ApiResponse<NoteDto>> updateNoteById(@PathVariable String id, @Valid @RequestBody CreateNoteRequestDto req) {
+        NoteDto note = notesService.updateNoteById(id, req);
+        return ResponseEntity.ok(ApiResponse.success(note, "Note updated successfully"));
+    }
+
 }
