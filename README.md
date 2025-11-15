@@ -134,7 +134,8 @@ POST /api/v1/notes
   "data": {
     "id": "123e4567-e89b-12d3-a456-426614174000",
     "content": "Buy groceries",
-    "createdAt": "2025-11-15T10:00:00Z"
+    "createdAt": "2025-11-15T13:34:10.339392Z",
+    "updatedAt": "2025-11-15T13:34:10.339393Z"
   }
 }
 ```
