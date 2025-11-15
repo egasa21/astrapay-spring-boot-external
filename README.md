@@ -7,19 +7,19 @@ A simple Notes application
 
 ## **Table of Contents**
 
-- [Features](https://github.com/egasa21/astrapay-spring-boot-external/tree/master#features)
+- [Features](https://github.com/egasa21/notes-api/tree/master#features)
 
-- [Technology Stack](https://github.com/egasa21/astrapay-spring-boot-external/tree/master#technology-stack)
+- [Technology Stack](https://github.com/egasa21/notes-api/tree/master#technology-stack)
 
-- [Project Structure](https://github.com/egasa21/astrapay-spring-boot-external/tree/master#project-structure)
+- [Project Structure](https://github.com/egasa21/notes-api/tree/master#project-structure)
 
-- [API Endpoints](https://github.com/egasa21/astrapay-spring-boot-external/tree/master#api-endpoints)
+- [API Endpoints](https://github.com/egasa21/notes-api/tree/master#api-endpoints)
 
-- [Request & Response Format](https://github.com/egasa21/astrapay-spring-boot-external/tree/master#request--response-format)
+- [Request & Response Format](https://github.com/egasa21/notes-api/tree/master#request--response-format)
 
-- [Running the Application](https://github.com/egasa21/astrapay-spring-boot-external/tree/master#running-the-application)
+- [Running the Application](https://github.com/egasa21/notes-api/tree/master#running-the-application)
 
-- [Validation & Error Handling](https://github.com/egasa21/astrapay-spring-boot-external/tree/master#validation--error-handling)
+- [Validation & Error Handling](https://github.com/egasa21/notes-api/tree/master#validation--error-handling)
 
 ---
 
