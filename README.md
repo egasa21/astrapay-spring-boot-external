@@ -102,13 +102,13 @@ A simple Notes application
 
 Base URL: `/api/v1/notes`
 
-|Method|Endpoint|Description|Response Status|
-|---|---|---|---|
-|POST|`/`|Create a new note|201 Created|
-|GET|`/`|Get all notes|200 OK|
-|GET|`/{id}`|Get note by ID|200 OK / 404 Not Found|
-|PUT|`/{id}`|Update note by ID|200 OK / 404 Not Found|
-|DELETE|`/{id}`|Delete note by ID|200 OK / 404 Not Found|
+| Method | Endpoint | Description       | Response Status        |
+|--------|----------|-------------------|------------------------|
+| POST   | `/`      | Create a new note | 201 Created            |
+| GET    | `/`      | Get all notes     | 200 OK                 |
+| GET    | `/{id}`  | Get note by ID    | 200 OK / 404 Not Found |
+| PUT    | `/{id}`  | Update note by ID | 200 OK / 404 Not Found |
+| DELETE | `/{id}`  | Delete note by ID | 200 OK / 404 Not Found |
 
 ---
 
