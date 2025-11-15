@@ -12,5 +12,6 @@ public class NoteModel {
     private String id;
     private String content;
     private Instant createdAt;
+    private Instant updatedAt;
 
 }

@@ -15,6 +15,7 @@ public class NotesRepository {
        if(note.getId() == null){
            note.setId(UUID.randomUUID().toString());
            note.setCreatedAt(Instant.now());
+           note.setUpdatedAt(Instant.now());
        }
        notes.put(note.getId(), note);
        return note;
@@ -32,5 +33,12 @@ public class NotesRepository {
 
     public void deleteById(String id) {
         notes.remove(id);
+    }
+
+    public NoteModel updateNoteById(String id, NoteModel note) {
+        NoteModel saved = notes.get(id);
+        saved.setContent(note.getContent());
+        saved.setUpdatedAt(Instant.now());
+        return saved;
     }
 }

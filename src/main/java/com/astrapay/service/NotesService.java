@@ -44,7 +44,7 @@ public class NotesService {
         NoteModel note = notesRepository.findById(id)
                 .orElseThrow(() -> new NotFoundException("Note with id: " + id + " not found"));
         note.setContent(req.getContent());
-        NoteModel saved = notesRepository.save(note);
+        NoteModel saved = notesRepository.updateNoteById(note.getId(), note);
         return mapToDto(saved);
     }
 
@@ -53,6 +53,7 @@ public class NotesService {
         dto.setId(model.getId());
         dto.setContent(model.getContent());
         dto.setCreatedAt(model.getCreatedAt());
+        dto.setUpdatedAt(model.getUpdatedAt());
         return dto;
     }
 
