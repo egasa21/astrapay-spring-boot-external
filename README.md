@@ -61,24 +61,39 @@ A simple Notes application
 ## **Project Structure**
 
 ```
-src
-├── main
-│   ├── java/com/astrapay
-│   │   ├── NotesApplication.java
-│   │   ├── controller
-│   │   │   ├── NotesController.java
-│   │   │   └── advice/NotesAdvice.java
-│   │   ├── dto
-│   │   │   ├── CreateNoteRequestDto.java
-│   │   │   ├── NoteDto.java
-│   │   │   └── response/ApiResponse.java
-│   │   ├── exception/NotFoundException.java
-│   │   ├── repository/NotesRepository.java
-│   │   ├── service
-│   │   │   ├── NotesService.java
-│   │   │   └── model/NoteModel.java
-│   │   └── configuration/ExampleConfig.java
-│   └── resources/application.properties
+├── README.md
+├── pom.xml
+├── src
+│   └── main
+│       ├── java
+│       │   └── com
+│       │       └── astrapay
+│       │           ├── NotesApplication.java
+│       │           ├── configuration
+│       │           │   └── CorsConfig.java
+│       │           ├── controller
+│       │           │   ├── NotesController.java
+│       │           │   └── advice
+│       │           │       └── NotesAdvice.java
+│       │           ├── dto
+│       │           │   ├── CreateNoteRequestDto.java
+│       │           │   ├── NoteDto.java
+│       │           │   └── response
+│       │           │       └── ApiResponse.java
+│       │           ├── entity
+│       │           ├── enums
+│       │           ├── exception
+│       │           │   └── NotFoundException.java
+│       │           ├── repository
+│       │           │   └── NotesRepository.java
+│       │           ├── security
+│       │           ├── service
+│       │           │   ├── NotesService.java
+│       │           │   └── model
+│       │           │       └── NoteModel.java
+│       │           └── validator
+│       └── resources
+│           └── application.properties
 ```
 
 ---
