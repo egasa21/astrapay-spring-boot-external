@@ -1,6 +1,7 @@
 package com.astrapay.controller.advice;
 
 import com.astrapay.dto.response.ApiResponse;
+import com.astrapay.exception.NotFoundException;
 import org.springframework.http.HttpStatus;
 import org.springframework.validation.FieldError;
 import org.springframework.web.bind.MethodArgumentNotValidException;
@@ -24,5 +25,11 @@ class NotesAdvice {
             errors.put(fieldName, errorMessage);
         });
         return ApiResponse.failure("Validation failed", errors);
+    }
+
+    @ExceptionHandler(NotFoundException.class)
+    @ResponseStatus(HttpStatus.NOT_FOUND)
+    public ApiResponse<String> handleNotFoundException(NotFoundException ex) {
+        return ApiResponse.failure(ex.getMessage(), null);
     }
 }

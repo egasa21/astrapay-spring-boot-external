@@ -2,6 +2,7 @@ package com.astrapay.service;
 
 import com.astrapay.dto.NoteDto;
 import com.astrapay.dto.CreateNoteRequestDto;
+import com.astrapay.exception.NotFoundException;
 import com.astrapay.repository.NotesRepository;
 import com.astrapay.service.model.NoteModel;
 import lombok.extern.slf4j.Slf4j;
@@ -27,6 +28,10 @@ public class NotesService {
 
     public List<NoteDto> getAllNotes() {
         return notesRepository.findAll().stream().map(this::mapToDto).collect(Collectors.toList());
+    }
+
+    public NoteDto getNoteById(String id) {
+        return notesRepository.findById(id).map(this::mapToDto).orElseThrow(() -> new NotFoundException("Note with id: " + id + " not found"));
     }
 
     private NoteDto mapToDto(NoteModel model) {

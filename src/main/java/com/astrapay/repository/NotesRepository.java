@@ -25,4 +25,8 @@ public class NotesRepository {
         list.sort(Comparator.comparing(NoteModel::getCreatedAt).reversed());
         return Collections.unmodifiableList(list);
     }
+
+    public Optional<NoteModel> findById(String id) {
+        return Optional.ofNullable(notes.get(id));
+    }
 }

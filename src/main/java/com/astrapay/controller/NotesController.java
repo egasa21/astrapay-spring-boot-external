@@ -47,4 +47,14 @@ public class NotesController {
         );
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<ApiResponse<NoteDto>> getNoteById(@PathVariable String id) {
+        return ResponseEntity.ok(
+                ApiResponse.success(
+                        notesService.getNoteById(id),
+                        "Note retrieved successfully"
+                )
+        );
+    }
+
 }
