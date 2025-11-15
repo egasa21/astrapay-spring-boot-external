@@ -34,6 +34,12 @@ public class NotesService {
         return notesRepository.findById(id).map(this::mapToDto).orElseThrow(() -> new NotFoundException("Note with id: " + id + " not found"));
     }
 
+    public void deleteNoteById(String id) {
+        NoteModel note = notesRepository.findById(id)
+                .orElseThrow(() -> new NotFoundException("Note with id: " + id + " not found"));
+        notesRepository.deleteById(note.getId());
+    }
+
     private NoteDto mapToDto(NoteModel model) {
         NoteDto dto = new NoteDto();
         dto.setId(model.getId());

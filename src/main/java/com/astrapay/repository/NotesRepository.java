@@ -29,4 +29,8 @@ public class NotesRepository {
     public Optional<NoteModel> findById(String id) {
         return Optional.ofNullable(notes.get(id));
     }
+
+    public void deleteById(String id) {
+        notes.remove(id);
+    }
 }

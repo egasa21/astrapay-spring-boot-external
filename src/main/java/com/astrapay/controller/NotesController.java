@@ -57,4 +57,10 @@ public class NotesController {
         );
     }
 
+    @DeleteMapping("/{id}")
+    public ResponseEntity<ApiResponse<String>> deleteNoteById(@PathVariable String id) {
+        notesService.deleteNoteById(id);
+        return ResponseEntity.ok(ApiResponse.success("Note deleted successfully", null));
+    }
+
 }
