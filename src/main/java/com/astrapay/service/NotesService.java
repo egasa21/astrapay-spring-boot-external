@@ -7,6 +7,9 @@ import com.astrapay.service.model.NoteModel;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+import java.util.stream.Collectors;
+
 @Service
 @Slf4j
 public class NotesService {
@@ -22,6 +25,9 @@ public class NotesService {
         return mapToDto(saved);
     }
 
+    public List<NoteDto> getAllNotes() {
+        return notesRepository.findAll().stream().map(this::mapToDto).collect(Collectors.toList());
+    }
 
     private NoteDto mapToDto(NoteModel model) {
         NoteDto dto = new NoteDto();
@@ -31,7 +37,7 @@ public class NotesService {
         return dto;
     }
 
-    private NoteModel mapToModel(CreateNoteRequestDto dto){
+    private NoteModel mapToModel(CreateNoteRequestDto dto) {
         return NoteModel.builder()
                 .content(dto.getContent())
                 .build();

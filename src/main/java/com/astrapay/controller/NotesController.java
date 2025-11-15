@@ -32,4 +32,9 @@ public class NotesController {
         return ResponseEntity.status(HttpStatus.CREATED).body(note);
     }
 
+    @GetMapping
+    public ResponseEntity<Iterable<NoteDto>> getAll() {
+        return ResponseEntity.ok(notesService.getAllNotes());
+    }
+
 }

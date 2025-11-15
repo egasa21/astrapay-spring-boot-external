@@ -4,7 +4,7 @@ import com.astrapay.service.model.NoteModel;
 import org.springframework.stereotype.Repository;
 
 import java.time.Instant;
-import java.util.UUID;
+import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
 
 @Repository
@@ -18,5 +18,11 @@ public class NotesRepository {
        }
        notes.put(note.getId(), note);
        return note;
+    }
+
+    public List<NoteModel> findAll() {
+        ArrayList<NoteModel> list = new ArrayList<>(notes.values());
+        list.sort(Comparator.comparing(NoteModel::getCreatedAt).reversed());
+        return Collections.unmodifiableList(list);
     }
 }
