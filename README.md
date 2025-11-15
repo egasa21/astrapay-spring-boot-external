@@ -169,30 +169,28 @@ POST /api/v1/notes
 
 ## **Running the Application**
 
-1. Clone the repository:
+Clone the repository:
 
 ```bash
 git clone git@github.com:egasa21/astrapay-spring-boot-external.git
 cd astrapay-spring-boot-external
 ```
+### Running with IntelliJ IDEA (Recommended)
 
-2. Build the project using Maven:
+1. Open IntelliJ IDEA.
 
-```bash
-mvn clean install
-```
+2. Select **File > Open...** and choose the project's root `pom.xml` file.
 
-3. Run the application:
+3. IntelliJ will automatically detect it as a Maven project and download all dependencies (this replaces `mvn clean install`).
 
-```bash
-mvn spring-boot:run
-```
+4. Wait for the indexing to complete.
 
-4. API will be available at:
+5. Find the main application class (the one annotated with `@SpringBootApplication`).
 
-```
-http://localhost:8000/api/v1/notes
-```
+6. Click the green "play" icon next to the class or the `main` method and select **"Run 'YourApplicationName.main()'"**.
+
+
+The server will start, and the API will be available at `http://localhost:8000`.
 
 ---
 
